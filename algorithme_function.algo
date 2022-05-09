@@ -1,0 +1,34 @@
+  FUNCTION dot_product(v1 , v2 : ARRAY_OF float[]; n :INTEGER ) : return_float 
+  VAR
+     i : INTEGER ;
+     n : v1.lenght ,v2.lenght :
+  BEGIN
+     ps:=0 ;
+     for i from 0 to n-1 step 1 do
+     ps:=ps+(v1[I]*V2[i]);
+     end for ; 
+     RETURN ps ;
+  END 
+  ALGORITHM algorithm_4
+ VAR
+     v1 , v2 : ARRAY_OF FLOAT[];
+     i,n : INTEGER ; 
+     ps : FLOAT ;
+ BEGIN
+      read(n);
+    for i from 0 to n-1 step 1 do 
+      write ("donner l'element " , i+1 , "du vecteur v1");
+      read(v1[i]); 
+      end for ;
+    for i from 0 to n-1 step 1 do 
+      write("donner l'element" , i+1 , "du vecteur v2");
+      read(v2[i]);
+      end for ;
+      end for ;
+      dot_product (v1,v2,n,ps);  
+      IF (ps=0) THEN
+        write("v1 and v2 sont orthogonaux")
+      ELSE
+        write("v1 and v2 ne sont pas orthognaux")
+      END_IF   
+ END
